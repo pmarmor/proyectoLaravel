@@ -1,0 +1,481 @@
+:root {
+    --marginFirstElements: 150px;
+}
+a {
+    font-weight: 600;
+    color: #3d6fdc;
+}
+.headerLinks{
+    display: flex;
+    align-self: center;
+    column-gap: 15px;
+}
+
+h1, h2, h3, h4 {
+    font-family: FiraSansRegular;
+}
+main.help{
+    display: block;
+    margin: 150px auto;
+    text-align: left;
+    width: 75%;
+}
+body {
+    -webkit-tap-highlight-color: transparent;
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    & input{
+        width: fit-content;
+    }
+}
+header {
+    left: 0;
+    top: 0;
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0 100px 0 40px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    position: fixed;
+    z-index:1;
+    height: 90px;
+    background: linear-gradient(180deg, rgb(23, 23, 23) 0%, rgba(0, 0, 0, 1) 100%);
+    text-align: center;
+    border-bottom: 3px solid rgb(247, 166, 16);
+    color: white;
+    display: flex;
+
+    .logoDiv {
+        min-width: 200px;
+        max-width: 200px;
+        display: flex;
+        justify-content: space-between;
+
+        & a {
+            width: 172px;
+            display: flex;
+            text-decoration: none;
+            color: white;
+            justify-content: space-between;
+        }
+
+        & h2 {
+            align-items: center;
+            display: flex;
+        }
+
+        & img {
+            cursor: pointer;
+            width: 20px;
+        }
+
+        .logo {
+            width: 50px;
+        }
+    }
+}
+
+main {
+    padding: 0 20px 50px    ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    align-content: flex-end;
+    margin-top: var(--marginFirstElements);
+    transition: 0.2s;
+    right: 0;
+    .imgContainer{
+        margin-top: 50px;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background: #d5d5d5;
+        border: solid black 1px;
+        border-radius: 15px;
+        & img{
+            min-height: 132px;
+            object-fit: fill;
+            position: relative;
+            width: 100%;
+        }
+
+
+    }
+}
+.gameCardWelcome{
+    display: flex;
+    flex-direction: column;
+    background: #DEDEDE;
+    align-items: center;
+    height: 430px;
+    min-width: 165px;
+    width: 25%;
+    max-width: 250px;
+    border: solid orange 2px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 25px;
+    position: relative;
+    & a{
+        text-decoration: none;
+        color: black;
+    }
+    & h3{
+        min-height: 45px;
+    }
+    & p{
+        height: 8vw;
+        min-height: 120px;
+    }
+    & img{
+        object-fit: fill;
+        min-height: 150px;
+        background: #77C3B0;
+        border-radius: 15px;
+        box-shadow: 0px 0px 107px -33px rgba(0,0,0,0.75);
+        width: 150px;
+    }
+}
+.welcome{
+  /*padding: 0 100px;*/
+}
+.welcome h2{
+    position: relative;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+.welcome hr{
+    position: relative;
+    margin-top:-15px;
+    margin-bottom: 35px;
+    width: 98%;
+}
+.gameCards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    margin:auto;
+    gap: 20px;
+}
+#asideAvatar{
+    width: 120px;
+    height: 120px;
+}
+aside {
+    overflow: hidden;
+    transition: 0.2s;
+    width: 0;
+    top: 0;
+    min-height: 100vh;
+    z-index: 2;
+    background: rgb(23, 23, 23);
+    background: linear-gradient(180deg, rgb(23, 23, 23) 0%, rgba(0, 0, 0, 1) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    .asideLinks p, .asideLinks div, .asideLinks a.addGameIcon{
+        font-size: 18px ;
+        display: flex;
+        column-gap: 15px;
+        align-items: flex-end;
+    }
+    & *{
+        pointer-events: auto;
+    }
+    .asideLinks .addGameIcon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & span{
+            height: auto;
+        }
+
+    }
+    .imgContainer{
+        margin-top: 50px;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background: #d5d5d5;
+        border: solid black 1px;
+        border-radius: 100%;
+        & img{
+            position: relative;
+            width: 104%;
+            min-height: 130px;
+            max-height: 190px;
+        }
+
+
+    }
+    .icon {
+        width: 30px;
+    }
+
+    & span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & a, & a:visited {
+        color: white;
+        text-decoration: none;
+        font-weight: 550;
+    }
+
+
+
+    & form {
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+        justify-content: center;
+
+        & input {
+            border: 2px solid rgba(0, 81, 248, 0.06);
+            padding: 10px;
+            border-radius: 20px;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        & input:focus {
+            box-shadow: 0 0 15px orange;
+        }
+
+        & input[type='submit'] {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            width: 80%;
+            background: none;
+            border: solid rgba(0, 51, 255, 0.75) 5px;
+            color: #0033ff;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        & input[type='submit']:focus {
+
+            color: white;
+            box-shadow: none;
+            background: rgb(0, 51, 255);
+        }
+    }
+
+    .leftArrow {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        width: 20px;
+    }
+
+    .content {
+        transition: 0.2s;
+        overflow: hidden;
+        row-gap: 20px;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        pointer-events: none;
+    }
+    .showContent{
+
+    }
+}
+.errors {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.showAside {
+    border-right: 3px solid rgb(247, 166, 16);
+    display: flex;
+    width: 18%;
+}
+@media (900px <= width <= 1300px) {
+    .showAside{
+        width: 25%;
+    }
+}
+@media (width<=900px ) {
+    .showAside {
+        width: 260px;
+    }
+}
+    svg {
+        width: 20px;
+    }
+
+
+.download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #00b60d !important;
+    padding: 3px;
+    position: relative;
+    bottom: 10px;
+    border-radius: 15px;
+    width: 120px;
+    border: solid #009d00 2px;
+    background: white;
+}
+.downloadWelcomeCard{
+    margin-top:10px;
+    padding: 10px;
+}
+    /*MINIATURAS DE JUEGOS*/
+    .gameCard {
+        display: flex;
+        padding: 10px;
+        border-radius: 10px;
+        position: relative;
+        width: 25%;
+        min-width: 235px;
+        border-radius: 10px;
+        background: linear-gradient(145deg, #cacaca, #cacaca);
+        box-shadow: 20px 20px 27px #bebebe;
+
+        & a {
+            text-decoration: none;
+            color: black;
+        }
+
+        & img {
+            border-radius: 10px;
+            background: #77C3B0;
+            box-shadow: 21px 21px 42px #c1c1c1,
+            -21px -21px 42px #cacaca;
+            width: 100px;
+            height: 100px;
+        }
+
+        .gameInfo {
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 48%;
+            height: 100%;
+        }
+
+        .linkSvg {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 20px;
+
+            & img {
+                border-radius: 0;
+                width: 100%;
+                background: transparent;
+            }
+        }
+    }
+.userCards{
+    background: #DADADA;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 270px;
+    height: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    .username{
+        margin-top:10px;
+        color: black;
+        text-decoration: none;
+    }
+    .downloadWelcomeCard{
+        margin-top:40px;
+            color: blue !important;
+        border-color: blue;
+    }
+    .imgContainer{
+        width: 20%;
+        height: 30%;
+        min-width: 100px;
+        min-height: 100px;
+        margin-top:unset;
+    }
+}
+    @media ( width <= 810px) {
+        .gameCards{
+            width: 100%;
+        }
+        .showAside {
+        width: 100%;
+    }
+        .gameCards{
+            justify-content: center;
+            gap: 40px;
+        }
+        .gameCardWelcome{
+            width: 30%;
+        }
+        header {
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0;
+            height: unset;
+            gap: 5px;
+            padding-bottom: 5px;
+            min-height: 40px;
+            .logoDiv{
+                min-width: unset;
+                max-width: unset;
+                & a{
+                    width: 120px;
+                    justify-content: space-evenly;
+                }
+                & img.logo{
+                    width: 30px;
+                }
+                & h2{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+@media ( width <= 550px) {
+    .welcome h2{
+        font-size: 30px;
+        margin: 20px auto;
+    }
+    .gameCardWelcome {
+        width: 80%;
+        max-width: unset;
+        & p{
+            overflow: hidden;
+        }
+    }
+}

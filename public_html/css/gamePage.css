@@ -1,0 +1,533 @@
+h1{
+    text-align: center;
+}
+.createGame{
+    & textarea{
+        resize: none;
+        width: 75%;
+        height: 200px;
+    }
+}
+form{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top:20px;
+    row-gap: 20px;
+    & div{
+        display: flex;
+        position: relative;
+        column-gap: 30px;
+        & label{
+            min-width: 90px;
+            width: 16%;
+        }
+        & input{
+            margin-left: 0;
+        }
+    }
+
+    & input[type='submit'], & input[type='file']{
+        cursor: pointer;
+    }
+}
+.description {
+    width: 75%;
+    margin-bottom: 10px;
+}
+.gamePage .description{
+    margin-top: -40px;
+    & h2{
+        text-decoration: underline;
+    }
+}
+.imgContainer{
+    position: relative;
+    min-width: 130px;
+    min-height: 130px;
+    max-width: 130px;
+    max-height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #c0c0c0;
+    border: solid black 3px;
+    border-radius: 20px;
+    & img{
+        position: relative;
+        width: 100%;
+    }
+    .editIcon{
+        width: 40%;
+        padding: 50px;
+        opacity: 0;
+        position: absolute;
+    }
+}
+.imgContainer:hover .editIcon{
+    opacity: 0.5;
+    background: gray;
+    cursor: pointer;
+}
+.errorsDiv{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+main.gamePage{
+    background: #e0e0e0;
+    border:solid orange 3px;
+    border-radius: 15px;
+    margin: 250px auto 100px;
+    padding: 0 40px 50px;
+    width: 50%;
+
+    .editIcon{
+        position: absolute;
+        width: 30px;
+        top: 60px;
+        right: 20px;
+    }
+    .topMain{
+        display: flex;
+        width: 100%;
+        position: relative;
+        top: -55px;
+    }
+    & div.imgContainer{
+        position: relative;
+        bottom: 40px;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border: solid black 1px;
+        border-radius: 15px;
+        background: #77C3B0;
+        #userAvatarPlaceholder{
+            position: relative;
+            width: 130%;
+        }
+    }
+    .gameTitle{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+        gap:10px;
+        :first-child{
+            position: relative;
+            top: 17px;
+        }
+        #heart{
+            width: 25px;
+            cursor: pointer;
+        }
+    }
+    & nav{
+        display: flex;
+        gap: 30px;
+        & span{
+            border-bottom: solid transparent 2px;
+        }
+        & span:hover, .active{
+            cursor:pointer;
+            user-select: none;
+            border-bottom: solid orange 2px;
+        }
+    }
+    .suggestions{
+        display: flex;
+        flex-direction: column;
+        padding-top: 25px;
+        row-gap: 25px;
+        width: 80%;
+        & form{
+            row-gap: 10px;
+            border: solid black 2px;
+            padding: 20px;
+            margin-bottom: 15px;
+            width: 50%;
+            border-radius: 15px;
+            & textarea{
+                resize: none;
+                height: 100px;
+            }
+            & input[type='submit']{
+                width: 100px;
+                margin-left: auto;
+            }
+        }
+    }
+    .feedback{
+        display: flex;
+        margin: auto;
+        padding-right: 20px;
+        justify-content: flex-start;
+        column-gap: 20px;
+        width:80% ;
+        display: flex;
+        position: relative;
+        .binIcon{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 0;
+            cursor: pointer;
+        }
+        .profileImg{
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            border-radius: 100%;
+            overflow: hidden;
+            & img{
+                min-width: 50px;
+                min-height: 75px;
+                width: 100%;
+                background: #D5D5D5;
+            }
+        }
+        .content{
+            position: relative;
+            & a{
+                text-decoration: none;
+                color: black;
+                font-width: bold;
+            }
+            & p{
+                margin: 3px 0;
+            }
+        }
+    }
+    .patchNotes{
+        margin-top: 40px;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        .cards{
+            box-shadow: 0px 0px 141px -23px rgba(255, 255, 255, 0.75);
+            width: 70%;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 15px;
+            background: #c4c4c4;
+        }
+        & form{
+            background: white;
+            border: solid black 2px;
+            padding: 15px;
+            margin-bottom: 15px;
+            width: 100%;
+            border-radius: 15px;
+            & h3{
+                text-decoration: underline;
+            }
+            .errors{
+                position: relative;
+                top: -20px;
+            }
+        }
+        & label{
+            width: 250px;
+        }
+        & textarea, & input{
+            resize: none;
+            width: 100%;
+            margin-top: 0;
+        }
+        & textarea{
+            height: 200px;
+        }
+    }
+    .featuresRealeased{
+        display: flex;
+        gap: 10%;
+        width: 80%;
+        .developing, .finished{
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            background: gray;
+            min-height: 230px;
+            width: 50%;
+            max-width: 45%;
+            overflow-wrap: break-word;
+            justify-content: flex-end;
+            & input{
+                width: 100%;
+            }
+            & div{
+                display: flex;
+            }
+            #developingContent{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+.buttonToggle{
+    /*font-family: Roboto, serif;*/
+    position: absolute;
+    top:100px;
+    right: 0px;
+    align-self: center;
+    height: 40px;
+    width: 150px;
+    background: white;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #00b60d;
+    border: solid #009d00 2px;
+}
+main.favouriteGames{
+    margin: 150px auto 20px;
+    display: flex;
+    width: 50%;
+    min-width: 630px;
+    gap: 20px;
+    .favGameCard{
+        position: relative;
+        padding: 20px 50px;
+        border-radius: 15px;
+        display: flex;
+        background: #dedede;
+        width: 100%;/*
+        animation: fadeOut 1s ;
+        animation-fill-mode: forwards;*/
+        .binIcon{
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            background: none;
+            width: 23px;
+            height: 25px;
+            border-radius:0;
+        }
+        & img{
+            box-shadow: 0px 0px 107px -33px rgba(0,0,0,0.75);
+            background: #77C3B0;
+            border-radius: 10px;
+            width: 145px ;
+            height: 145px;
+        }
+        & div:first-of-type{
+            margin-left: 15px;
+            gap: 10px;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            & div:first-of-type{
+                margin: 0;
+                position: relative;
+                bottom: 20px;
+            }
+        }
+        .userLink{
+            color: black;
+            text-decoration: none;
+        }
+        .buttonToggle{
+            align-self: flex-start;
+            position: relative;
+            top: 0;
+        }
+    }
+}
+textarea{
+    font-family: Roboto ;
+    font-weight: bold;
+}
+@keyframes fadeOut {
+    0%{opacity: 1}
+    100%{opacity: 0; display: none}
+}
+@media ( width <= 1300px) {
+    main.gamePage{
+        width: 90%;
+        padding-left:0;
+        padding-right: 0;
+        .editIcon{
+            right: 0px;
+        }
+        .topMain{
+            width: 90%;
+        }
+    }
+}
+@media ( width <= 900px) {
+    main.gamePage{
+        min-height: 620px;
+        .suggestions{
+            margin: 0;
+            width: 90%;
+            & form{
+                width: 80%;
+                margin: auto;
+            }
+        }
+        text-align: center;
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        padding:0 0 50px;
+        border-radius: 0;
+        .gameTitle{
+            width: 65%;
+        }
+        .topMain{
+            width: 90%;
+        }
+        .feedback .content, .howToPlay, .cards{
+            text-align: left;
+        }
+    }
+}
+@media ( width <= 720px) {
+main.gamePage{
+
+    .feedback .profileImg{
+        min-width: unset;
+        min-height: unset;
+        width: 40px;
+        height: 40px;
+        & img{
+            min-width: unset;
+            min-height: unset;
+        }
+    }
+    .feedback .content{
+        font-size: 15px;
+        width: 90%;
+        top: 0;
+    }
+    & nav span{
+        font-size: 15px;
+    }
+    & div.imgContainer{
+        width: 129px;
+        height: 129px;
+    }
+    .topMain{
+        flex-direction: column;
+        align-items: center;
+    }
+    .buttonToggle{
+        position: relative;
+        top: 0;
+    }
+    #heart{
+        align-self: center;
+    }
+    .gameTitle{
+        width: 100%;
+        padding: 5px;
+    }
+    .patchNotes{
+        align-items: center;
+    }
+    .patchNotes form{
+        width: 90%;
+    }
+}
+    main.favouriteGames{
+        min-width: unset;
+        width: 80%;
+        .favGameCard{
+           & img{
+               width: 115px;
+               height: 115px;
+           }
+            & h2{
+                font-size: 20px;
+                margin: 0 0 10px;
+            }
+            .buttonToggle{
+                font-size: 15px;
+                width: fit-content;
+                padding: 2px 10px;
+            }
+        }
+        }
+}
+@media ( width <= 560px) {
+   .createGame form{
+       width: 95%;
+        & div:not(.buttons){
+            flex-direction: column;
+            & textarea, & input[type='text'], & label{
+                width: 100%;
+            }
+        }
+    }
+}
+@media ( width <= 500px) {
+
+    main.gamePage .patchNotes {
+        width: 95%;
+
+        & form div {
+            flex-direction: column;
+        }
+    }
+
+    main.favouriteGames {
+        min-width: unset;
+        width: 80%;
+        .favGameCard {
+            padding: 20px 28px;
+            .description{
+                display: none;
+            }
+            .descriptionMobile{
+                display: flex;
+            }
+            height: 80px;
+            align-items: center;
+            & div:first-of-type {
+                & div:first-of-type {
+                    bottom: 17px;
+                }
+            }
+            .info{
+                font-size: 12px;
+
+            }
+            .binIcon {
+                right: 10px;
+                top: 10px;
+                width: 18px;
+            }
+
+            & img {
+                width: 70px;
+                height: 70px;
+            }
+
+            & h2 {
+                font-size: 15px;
+                margin: 10px 0;
+                text-overflow:ellipsis ;
+            }
+
+            .buttonToggle {
+                font-size: 10px;
+                width: fit-content;
+                padding: 5px;
+                height: fit-content;
+            }
+        }
+    }
+}

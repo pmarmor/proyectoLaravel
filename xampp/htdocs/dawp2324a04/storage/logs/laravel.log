@@ -1,0 +1,9 @@
+[2023-12-13 22:30:06] local.ERROR: There are no commands defined in the "clear" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"clear\" namespace. at /home/u972166336/domains/proyectospmm.fun/vendor/symfony/console/Application.php:657)
+[stacktrace]
+#0 /home/u972166336/domains/proyectospmm.fun/vendor/symfony/console/Application.php(708): Symfony\\Component\\Console\\Application->findNamespace()
+#1 /home/u972166336/domains/proyectospmm.fun/vendor/symfony/console/Application.php(262): Symfony\\Component\\Console\\Application->find()
+#2 /home/u972166336/domains/proyectospmm.fun/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun()
+#3 /home/u972166336/domains/proyectospmm.fun/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony\\Component\\Console\\Application->run()
+#4 /home/u972166336/domains/proyectospmm.fun/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
+"} 

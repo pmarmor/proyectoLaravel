@@ -1,0 +1,160 @@
+main{
+    padding-top:200px;
+}
+.profileDisplay{
+width: 65%;
+    background: #e0e0e0;
+    border: solid orange 2px;
+    display: flex;
+    box-shadow: 0px 0px 63px -58px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 0 100px;
+}
+.profileTop {
+    width: 100%;
+    display: flex;
+    position: relative;
+    height: 159px;
+    align-items: flex-end;
+    margin-bottom: -40px;
+    /*
+    bottom: 60px;
+    left: 100px;
+    top: -70px;*/
+    & div, & > span{
+        position: relative;
+        bottom: 65px;
+        display: flex;
+        height: 70%;
+        align-items: center;
+        justify-content: center;
+    }
+    .userAvatar {
+        position: relative;
+        bottom: 60px;
+        max-width: 150px;
+        border: solid black 5px;
+        background: white;
+        border-radius: 100%;
+    }
+    .userNameAndTag{
+        display: flex;
+        width: 120px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        & :first-child{
+            font-size: 27px;
+        }
+        & :last-child{
+
+        }
+    }
+    .userFollowersyFollow{
+        gap: 10px;
+    }
+}
+
+.infoDisplay h2{
+    margin-block-end: 0px;
+}
+.buttonToggle{
+    /*font-family: Roboto, serif;*/
+    position: absolute;
+    top:20px;
+    right: 0px;
+    align-self: center;
+    height: 40px;
+    width: 150px;
+    background: white;
+    border-radius: 10px;
+    color: blue;
+    border: solid blue 2px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.games{
+    padding: 40px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.buttonToggle.edit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #00b60d;
+    border: solid #009d00 2px;
+}
+button.buttonToggle.unfollow{
+    color: red;
+    border: solid red 2px;
+}
+.buttonToggle:hover{
+     background: #afafff;
+ }
+.buttonToggle.unfollow:hover{
+    background: #ffa9a9;
+}
+.buttonToggle.edit:hover{
+    background: #afffaf;
+}
+
+fieldset.editUser{
+    width: 50%;
+    margin: auto;
+}
+
+div.imgContainer{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #d5d5d5;
+    border: solid black 1px;
+    border-radius: 100%;
+    #userAvatarPlaceholder{
+        position: relative;
+    }
+
+
+}
+@media ( width <= 880px) {
+    .profileDisplay{
+        display: flex;
+        flex-direction: column;
+    }
+    .profileTop{
+        flex-direction: column;
+        height: unset;
+        justify-content: center;
+        align-items: center;
+    }
+    .buttonToggle{
+        position: relative;
+        top:unset;
+        bottom: 55px;
+    }
+    .userFollowersyFollow{
+        text-align: center;
+    }
+}
+@media ( width <= 700px) {
+    .profileDisplay{
+        width: 95%;
+        padding: 0 20px;
+    }
+    div.imgContainer{
+        width: 123px;
+        height: 123px;
+    }
+}
+@media ( width <= 600px) {
+    .profileDisplay{
+        width: 100%;
+    }
+}

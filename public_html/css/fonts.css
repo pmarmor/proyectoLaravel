@@ -1,0 +1,12 @@
+@font-face {
+    font-family: Arimo;
+    src: url(../fonts/Arimo/Arimo-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: FiraSansRegular;
+    src: url(../fonts/Fira_Sans/FiraSans-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Light.ttf);
+}

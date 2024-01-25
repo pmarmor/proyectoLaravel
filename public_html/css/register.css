@@ -1,0 +1,95 @@
+main{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+fieldset{
+    padding: 30px 20px;
+    border:2px solid orange;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -90px;
+    width: 1000px;
+    border-radius: 20px;
+
+}
+legend{
+    position: relative;
+    margin: auto;
+    font-size: 40px;
+    border: 2px solid orange;
+    background: #c9c9c9;
+    padding:10px;
+    border-radius:  10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 20%;
+}
+.editUser{
+    width: 40%;
+    min-width: 600px;
+    min-height: 50%;
+    .imgContainer{
+        position: relative;
+        width: 130px;
+        height: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background: #c0c0c0;
+        border: solid black 3px;
+        border-radius: 100%;
+        & img{
+            position: relative;
+           width: 100%;
+        }
+        .editIcon{
+            width: 40%;
+            padding: 50px;
+            opacity: 0;
+            position: absolute;
+        }
+
+
+    }
+    .imgContainer:hover .editIcon{
+        opacity: 0.5;
+        background: gray;
+        cursor: pointer;
+    }
+    .errorsDiv{
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media ( width <= 850px) {
+    .editUser{
+        min-width: unset;
+        width:90%;
+    }
+    input{
+        width: unset;
+    }
+}
+@media(width <= 500px){
+    .editUser{
+        width: 100%;
+        border-radius: 0;
+    }
+    legend{
+        font-size: 30px;
+    }
+}
+
